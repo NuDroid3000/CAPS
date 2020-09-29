@@ -31,7 +31,7 @@ echo Installed some essential packages.
 genfstab -U /mnt >> /mnt/etc/fstab
 echo Fstab generated.
 
-curl -L poopoo > /mnt/install-part2.sh
-curl -L networkmanagersetupwhatever > /mnt/nm.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/install-part2.sh > /mnt/install-part2.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/nm.sh > /mnt/nm.sh
 echo Use arch-chroot /mnt to chroot into the environment
 echo run sh nm.sh if you need wifi and then run sh install-part2.sh
