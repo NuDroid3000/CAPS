@@ -49,5 +49,7 @@ useradd -m -G wheel $username
 echo Enter password.
 passwd $username
 
-curl -L fart >> gnome-finalise.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/gnome-finalise.sh >> gnome-finalise.sh
 echo exit the chroot and reboot the machine.
+echo This finalise script is for the GNOME desktop environment
+echo use curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/(XSOFTWARE)-finalise.sh if you have prior knowledge to another finalise script.
