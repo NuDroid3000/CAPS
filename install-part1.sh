@@ -3,6 +3,7 @@
 
 INSTALLDRIVE=/dev/sda
 INSTALLPARTITION=/dev/sda1
+KERNEL=linux
 
 loadkeys uk
 echo Loaded UK keymap. && echo
@@ -24,7 +25,7 @@ mkfs.ext4 $INSTALLPARTITION
 echo Formatted partition.
 mount $INSTALLPARTITION /mnt
 echo Mounted partition.
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base ${KERNEL} linux-firmware
 echo Installed Linux kernel.
 pacstrap /mnt nano neofetch man-db man-pages networkmanager
 echo Installed some essential packages.
