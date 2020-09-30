@@ -3,6 +3,7 @@
 
 HOSTNAME=provisioned-system
 INSTALLDRIVE=/dev/sda
+FINALISE=gnome
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 hwclock --systohc
@@ -49,6 +50,6 @@ useradd -m -G wheel $username
 echo Enter password.
 passwd $username
 
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/gnome-finalise.sh >> gnome-finalise.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${FINALISE}-finalise.sh >> finalise.sh
 echo exit the chroot and reboot the machine.
-echo This finalise script is for the GNOME desktop environment
+echo The default finalise script is for installing GNOME.
