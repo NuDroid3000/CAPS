@@ -5,6 +5,7 @@ HOSTNAME=provisioned-system
 INSTALLDRIVE=/dev/sda
 FINALISE=gnome
 GRAPHICSVENDOR=amd
+AURHELPER=pacaur
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 hwclock --systohc
@@ -53,5 +54,6 @@ passwd $username
 
 curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${FINALISE}-finalise.sh >> finalise.sh
 curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${GRAPHICSVENDOR}-gpudrivers.sh >> gpudrivers.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${AURHELPER}-aurhelper.sh >> aurhelper.sh
 echo exit the chroot and reboot the machine.
 echo Run systemctl start NetworkManager and then run setup sudo by editing /etc/sudoers using nano
