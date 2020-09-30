@@ -9,4 +9,5 @@ git clone https://aur.archlinux.org/pacaur.git
 cd pacaur
 makepkg -sci
 echo 'export EDITOR=$(which nano)' >> ~/.bashrc
+export EDITOR=$(which nano)
 cd ~
