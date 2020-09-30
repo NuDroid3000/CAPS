@@ -12,8 +12,8 @@ echo System clock updated. && echo
 
 fdisk -l
 tput setaf 1 && echo Before saying yes, if the drive you want to install to is not /dev/sda${RESET}
-tput setaf 1 && echo Open up the bash script and edit the INSTALLDRIVE variable.
-tput setaf 255 && parted $INSTALLDRIVE mklabel msdos
+tput setaf 255 && echo Open up the bash script and edit the INSTALLDRIVE variable.
+parted $INSTALLDRIVE mklabel msdos
 
 echo Formatted hard drive. && echo
 echo Enter -1 for end.
