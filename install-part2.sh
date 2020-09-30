@@ -4,6 +4,7 @@
 HOSTNAME=provisioned-system
 INSTALLDRIVE=/dev/sda
 FINALISE=gnome
+GRAPHICSVENDOR=amd
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 hwclock --systohc
@@ -50,7 +51,7 @@ useradd -m -G wheel $username
 echo Enter password.
 passwd $username
 
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${FINALISE}-finaliseR.sh >> finalise.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${FINALISE}-finalise.sh >> finalise.sh
+curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${GRAPHICSVENDOR}-gpudrivers.sh >> gpudrivers.sh
 echo exit the chroot and reboot the machine.
 echo Run systemctl start NetworkManager and then run setup sudo by editing /etc/sudoers using nano
-echo The default finalise script is for installing GNOME.
