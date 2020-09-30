@@ -1,4 +1,5 @@
 # GNOME finalisation script.
+# Don't run as root.
 
 sudo pacman -Syu gnome
 echo GNOME installed.
