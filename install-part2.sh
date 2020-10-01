@@ -3,6 +3,8 @@
 
 HOSTNAME=provisioned-system
 INSTALLDRIVE=/dev/sda
+MIRROR=https://raw.githubusercontent.com/Colean128/arch-provision/master
+#MIRROR=https://ap.colean.cc/m
 FINALISE=gnome
 GRAPHICSVENDOR=amd
 AURHELPER=pacaur
@@ -52,8 +54,8 @@ useradd -m -G wheel $username
 echo Enter password.
 passwd $username
 
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${FINALISE}-finalise.sh >> finalise.sh
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${GRAPHICSVENDOR}-gpudrivers.sh >> gpudrivers.sh
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/${AURHELPER}-aurhelper.sh >> aurhelper.sh
+curl -L ${MIRROR}/${FINALISE}-finalise.sh >> finalise.sh
+curl -L ${MIRROR}/${GRAPHICSVENDOR}-gpudrivers.sh >> gpudrivers.sh
+curl -L ${MIRROR}/${AURHELPER}-aurhelper.sh >> aurhelper.sh
 echo exit the chroot and reboot the machine.
 echo Run systemctl start NetworkManager and then run setup sudo by editing /etc/sudoers using nano
