@@ -4,6 +4,9 @@
 INSTALLDRIVE=/dev/sda
 INSTALLPARTITION=/dev/sda1
 KERNEL=linux
+MIRROR=https://raw.githubusercontent.com/Colean128/arch-provision/master
+#MIRROR=https://ap.colean.cc/m
+PART2OPTIONS=
 
 loadkeys uk
 echo Loaded UK keymap. && echo
@@ -12,8 +15,8 @@ timedatectl set-ntp true
 echo System clock updated. && echo
 
 fdisk -l
-tput setaf 1 && echo Before saying yes, if the drive you want to install to is not /dev/sda${RESET}
-tput setaf 255 && echo Open up the bash script and edit the INSTALLDRIVE variable.
+echo Before saying yes, if the drive you want to install to is not /dev/sda
+echo Open up the bash script and edit the INSTALLDRIVE variable.
 parted $INSTALLDRIVE mklabel msdos
 
 echo Formatted hard drive. && echo
@@ -32,7 +35,7 @@ echo Installed some essential packages.
 genfstab -U /mnt >> /mnt/etc/fstab
 echo Fstab generated.
 
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/install-part2.sh > /mnt/install-part2.sh
-curl -L https://raw.githubusercontent.com/Colean128/arch-provision/master/nm.sh > /mnt/nm.sh
+curl -L ${MIRROR}/install-part2-${PART2OPTIONS}.sh > /mnt/install-part2.sh
+curl -L ${MIRROR}/nm.sh > /mnt/nm.sh
 echo Use arch-chroot /mnt to chroot into the environment
 echo run sh nm.sh if you need wifi and then run sh install-part2.sh
