@@ -44,6 +44,7 @@ echo Installed GRUB.
 
 pacman -Syu sudo
 echo Installed sudo.
+echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 
 echo Enter your username.
 read username
