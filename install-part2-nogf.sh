@@ -3,7 +3,7 @@
 
 HOSTNAME=provisioned-system
 INSTALLDRIVE=/dev/sda
-MIRROR=https://raw.githubusercontent.com/Colean128/arch-provision/master
+MIRROR=https://raw.githubusercontent.com/Colean128/CAPS/master
 #MIRROR=https://ap.colean.cc/m
 AURHELPER=pacaur
 
