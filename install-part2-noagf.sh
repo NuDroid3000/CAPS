@@ -3,8 +3,6 @@
 
 HOSTNAME=provisioned-system
 INSTALLDRIVE=/dev/sda
-MIRROR=https://raw.githubusercontent.com/Colean128/arch-provision/master
-#MIRROR=https://ap.colean.cc/m
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 hwclock --systohc
