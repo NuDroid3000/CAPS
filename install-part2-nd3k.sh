@@ -5,7 +5,7 @@ HOSTNAME=nd3k-archbox
 INSTALLDRIVE=/dev/sda
 MIRROR=https://raw.githubusercontent.com/NuDroid3000/CAPS/master
 #MIRROR=https://ap.colean.cc/m
-FINALISE=ithreewm
+FINALISE=blackbox
 
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 hwclock --systohc
