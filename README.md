@@ -1,2 +1,2 @@
-# arch-provision
-arch linux install script for me.
+# Colean's Arch Provisioning Scripts (CAPS)
+Information at ap.colean.cc
