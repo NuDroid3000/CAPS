@@ -4,7 +4,7 @@
 INSTALLDRIVE=/dev/sda
 INSTALLPARTITION=/dev/sda1
 KERNEL=linux
-MIRROR=https://raw.githubusercontent.com/Colean128/arch-provision/master
+MIRROR=https://raw.githubusercontent.com/Colean128/CAPS/master
 #MIRROR=https://ap.colean.cc/m
 PART2OPTIONS=
 
