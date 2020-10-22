@@ -1,4 +1,4 @@
-MIRROR=https://raw.githubusercontent.com/Colean128/CAPS/master
+MIRROR=https://raw.githubusercontent.com/NuDroid300/CAPS/master
 #MIRROR=https://ap.colean.cc/m
 PART1OPTIONS=
 
