@@ -51,5 +51,3 @@ echo "nd3k:password" | chpasswd
 echo login details are nd3k password
 
 curl -L ${MIRROR}/${FINALISE}-finalise.sh >> finalise.sh
-echo exit the chroot and reboot the machine.
-echo Run systemctl start NetworkManager
