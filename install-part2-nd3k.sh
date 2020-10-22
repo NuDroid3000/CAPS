@@ -42,7 +42,7 @@ grub-install --target=i386-pc $INSTALLDRIVE
 grub-mkconfig -o /boot/grub/grub.cfg
 echo Installed GRUB.
 
-pacman -Syu doas
+pacman -Syu opendoas
 echo Installed doas.
 echo 'permit :wheel' >> /etc/doas.conf
 
